@@ -1,0 +1,75 @@
+ html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #e2e8f0; /* slate-200 */
+        }
+
+        /* --- Main Task Card Styling --- */
+        .task-card-link {
+            display: block;
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .task-card-link:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3), 0 0 40px rgba(59, 130, 246, 0.3);
+        }
+
+        /* --- Individual Task Page Styling --- */
+        .task-page {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(51, 65, 85, 0.5);
+            color: #cbd5e1;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background-color: #334155;
+            color: white;
+        }
+
+        /* --- Custom UI Elements --- */
+        .custom-input {
+            background-color: rgba(15, 23, 42, 0.7); border: 1px solid #334155;
+            color: #e2e8f0; border-radius: 8px; padding: 0.75rem 1rem; transition: all 0.2s;
+        }
+        .custom-input:focus {
+            outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }
+        .custom-btn {
+            background-color: #3b82f6; color: white; font-weight: 600; padding: 0.75rem 1.5rem;
+            border-radius: 8px; transition: all 0.2s; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        .custom-btn:hover {
+            background-color: #2563eb; transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+        .remove-btn {
+            background-color: #ef4444; color: white; border: none; border-radius: 5px;
+            padding: 4px 10px; font-size: 0.8rem; margin-left: 1rem; cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .remove-btn:hover { background-color: #dc2626; }
+        
+        /* Grade result colors */
+        .grade-A { color: #4ade80; } .grade-B { color: #a3e635; }
+        .grade-C { color: #facc15; } .grade-F { color: #f87171; }
